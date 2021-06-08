@@ -58,6 +58,15 @@ export default {
       }
     });
   },
+  async fetch(context) {
+    // Loading reference data - Articles in our case
+    if(context.store.state.articles.loaded !== '1') {
+
+      let articlesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'articles/', version: 'draft' })
+      context.store.commit('articles/setArticles', articlesRefRes.data.stories)
+      context.store.commit('articles/setLoaded', '1')
+    }
+  },
 }
 </script>
 
