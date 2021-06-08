@@ -6,7 +6,7 @@
           <nuxt-link class="text-green-600 hover:underline" to="/">Home</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="text-green-600 hover:underline" to="/en/blog">Blog</nuxt-link>
+          <nuxt-link class="text-green-600 hover:underline" to="/articles">Blog</nuxt-link>
         </li>
       </ul>
     </nav>
