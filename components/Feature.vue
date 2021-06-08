@@ -1,8 +1,15 @@
 <template>
   <div
     v-editable="blok"
-    class="py-2">
+    class="py-2 text-center">
+    <img
+      v-if="blok.icon"
+      class="mx-auto mb-5"
+      :src="blok.icon.filename">
     <h1 class="text-lg">{{ blok.name }}</h1>
+    <p class="text-gray-600">
+      {{ blok.description }}
+    </p>
   </div>
 </template>
 
